@@ -71,9 +71,9 @@ public class SpringSecurityAuthenticationApplicationTests {
 		boolean matches = pe.matches("1234", encode);
 		System.out.println(matches); 	
 		System.out.println();
-		String encode2 = pe.encode("1234");
+		String encode2 = pe.encode("5678");
 		System.out.println(encode2);
-		boolean matches2 = pe.matches("1234", encode2);
+		boolean matches2 = pe.matches("5678", encode2);
 		System.out.println(matches2);	
 	}	
 }

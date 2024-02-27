@@ -94,5 +94,5 @@
 
   > Spring Security Filter
   - Architecture
-    Hyper link: https://docs.spring.io/spring-security/reference/servlet/architecture.html
+    Hyper-link: https://docs.spring.io/spring-security/reference/servlet/architecture.html
 

@@ -1,4 +1,4 @@
-![image](https://github.com/JamesCoding888/Spring-Security-Online-Lesson/assets/83496093/95f19aeb-e6e1-4f82-9028-88e7c0673b37)# Spring-Security-Online-Lesson
+# Security-Online-Lesson
   > Spring Tool Suite 4 version
   - 4.15.1.RELEASE
 
@@ -98,5 +98,5 @@
   > Spring Security deprecate
   - WebSecurityConfigurerAdapter
   > Introduction:
-    https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter#ldap-authentication
+  - https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter#ldap-authentication
 

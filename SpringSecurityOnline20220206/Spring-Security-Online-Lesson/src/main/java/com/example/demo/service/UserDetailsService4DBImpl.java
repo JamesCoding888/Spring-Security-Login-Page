@@ -1,22 +1,21 @@
 package com.example.demo.service;
 
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.authority.AuthorityUtils;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.example.demo.repository.UserDao;
+import com.example.demo.entity.UserEntity;
+import com.example.demo.repository.UserRepository;
 
-//@Service
-public class UserDetailsServiceImpl implements UserDetailsService {
-
-//	@Autowired
-	UserDao userDao;
+@Service
+public class UserDetailsService4DBImpl implements UserDetailsService {
+	
+	@Autowired
+    private UserRepository userRepository;
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -26,17 +25,13 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 		 */		
 		// System.out.println("LoadUserByUserName: " + username);
 		// 1. Verify if user exist
-		Optional<Entry<String, Map<String, String>>> opt = userDao.users.
-				entrySet().
-				stream().
-				filter((Entry<String, Map<String, String>> e) -> e.getKey().equals(username)).
-				findFirst();								
+		Optional<UserEntity> opt = userRepository.findByUsername(username);							
 		if(!opt.isPresent()) throw new UsernameNotFoundException("Not found!");
 		
-		// 2. Require the related data and verify the password
-		Map<String, String> info = opt.get().getValue();
-		String password = info.get("password");
-		String authority = info.get("authority");
+		// 2. Retrieve user details
+		UserEntity user = opt.get();
+		String password = user.getPassword();
+		String authority = user.getAuthority();
 		// Notice! The User class here, is from 'org.springframework.security.core.userdetails.User'
 		return new User(username, 
 					    password, 

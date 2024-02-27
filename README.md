@@ -97,6 +97,6 @@
     Hyper-link: https://docs.spring.io/spring-security/reference/servlet/architecture.html
   > Spring Security deprecate
   - WebSecurityConfigurerAdapter
-    Introduction:
+  > Introduction:
     https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter#ldap-authentication
 

@@ -1,5 +1,6 @@
 # Spring-Security-Online-Lesson
-  > Spring Tool Suite 4: 4.15.1.RELEASE
+  > Spring Tool Suite 4 version
+  - 4.15.1.RELEASE
 
   > Marketplace: Thymeleaf Plugin for Eclipse 3.0.0
 

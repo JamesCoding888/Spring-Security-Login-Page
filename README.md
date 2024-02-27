@@ -93,5 +93,7 @@
               </project>
 
   > Spring Security Filter
-  - https://docs.spring.io/spring-security/reference/servlet/architecture.html![image](https://github.com/JamesCoding888/Spring-Security-Online-Lesson/assets/83496093/4ce715f9-2a2d-4adc-a89a-2bcd1d4b6042)
+  - Architecture
+  - Hyper link:
+    https://docs.spring.io/spring-security/reference/servlet/architecture.html
 

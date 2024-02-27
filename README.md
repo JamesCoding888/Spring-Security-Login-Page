@@ -1,1 +1,1 @@
-# SpringBootSecurityBook02
+# Spring-Security-Online-Lesson

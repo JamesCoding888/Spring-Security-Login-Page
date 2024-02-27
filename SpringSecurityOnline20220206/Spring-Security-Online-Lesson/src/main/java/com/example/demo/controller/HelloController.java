@@ -7,9 +7,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HelloController {
 	@RequestMapping("/")
-	@ResponseBody
+	// @ResponseBody
 	public String welcome() {
-		return "Welcome ! Spring Security";
+		// return "Welcome ! Spring Security";
+		return "welcome";
 	}
 	
 	@RequestMapping("/loginpage")	
@@ -23,4 +24,21 @@ public class HelloController {
 		return "fail";
 	}
 	
+	@RequestMapping("/adminpage")
+	@ResponseBody
+	public String adminpage() {
+		return "adminpage";
+	}
+	
+	@RequestMapping("/managerpage")
+	@ResponseBody
+	public String managerpage() {
+		return "managerpage";
+	}
+	
+	@RequestMapping("/employeepage")
+	@ResponseBody
+	public String employeepage() {
+		return "employeepage";
+	}
 }
